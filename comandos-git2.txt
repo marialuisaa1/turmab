@@ -1,0 +1,133 @@
+##Comandos de navegação
+dir - Lista os diretórios da raiz.
+
+cd <diretório> - Entra no diretório especificado.
+
+cd .. - Retorna para o diretório anterior.
+
+pwd - Mostra o diretório atual.
+
+ls - Lista os arquivos e pastas no diretório atual (pode variar entre sistemas operacionais, no Linux/Unix é comum usar).
+
+ls -a - Lista todos os arquivos, incluindo os ocultos, no diretório atual.
+
+##Comandos de Criação e Edição
+
+git init - Inicializa um novo repositório Git no diretório atual.
+
+touch <nome-do-arquivo> - Cria um novo arquivo no diretório atual (usado em sistemas Unix/Linux).
+
+echo <conteúdo> > <nome-do-arquivo> - Cria um arquivo e insere conteúdo nele (também utilizado no Linux/Unix).
+
+git add <nome-do-arquivo> - Adiciona um arquivo ao "staging" para ser comitado.
+
+git add . - Adiciona todos os arquivos modificados ao "staging".
+
+git commit -m "Mensagem do commit" - Realiza o commit das alterações com uma mensagem.
+
+git commit --amend - Edita o último commit (permite modificar a mensagem ou adicionar arquivos).
+
+nano <nome-do-arquivo> ou vim <nome-do-arquivo> - Abre o arquivo no editor de texto (dependendo do editor instalado).
+
+git rm <nome-do-arquivo> - Remove um arquivo do repositório e do diretório de trabalho.
+
+git mv <arquivo-antigo> <novo-nome> - Renomeia ou move um arquivo no repositório.
+
+
+##Comandos de Controle de Versão
+
+git status – Verifica o status dos arquivos modificados.
+
+git diff – Exibe as diferenças entre a versão atual e a última versão do arquivo.
+
+git log – Exibe o histórico de commits.
+
+git show <id-do-commit> – Mostra as alterações de um commit específico.
+
+git reset <id-do-commit> – Reseta o repositório para o estado de um commit específico (opções como --soft, --hard).
+
+git revert <id-do-commit> – Cria um novo commit que reverte as alterações feitas no commit especificado.
+
+##Comandos de Ramificação (Branching)
+
+git branch – Lista as branches do repositório.
+
+git branch <nome-da-branch> – Cria uma nova branch.
+
+git checkout <nome-da-branch> – Muda para uma branch existente.
+
+git checkout -b <nome-da-branch> – Cria e muda para uma nova branch.
+
+git merge <nome-da-branch> – Faz merge de uma branch para a branch atual.
+
+git branch -d <nome-da-branch> – Deleta uma branch local.
+
+git branch -D <nome-da-branch> – Força a exclusão de uma branch local.
+
+git merge --no-ff <nome-da-branch> – Faz merge de uma branch, mantendo o histórico de commits.
+
+##Comandos de Controle Remoto (Remote)
+
+git remote add <nome> <url-do-repositório> – Adiciona um repositório remoto.
+
+git remote -v – Exibe as URLs dos repositórios remotos configurados.
+
+git fetch <nome-do-remote> – Baixa as alterações do repositório remoto, mas não as mescla.
+
+git pull – Faz fetch e merge das alterações remotas com a branch local.
+
+git push <nome-do-remote> <nome-da-branch> – Envia suas alterações para o repositório remoto.
+
+git push origin --delete <nome-da-branch> – Deleta uma branch remota.
+
+## Comandos de Histórico e Inspeção
+git log – Mostra o histórico de commits.
+
+git log --oneline – Mostra o histórico de commits em uma linha por commit.
+
+git show <id-do-commit> – Mostra o conteúdo de um commit específico.
+
+git blame <nome-do-arquivo> – Exibe quem fez cada linha de modificação no arquivo.
+
+git reflog – Mostra o histórico de referências, permitindo recuperar commits perdidos.
+
+## Comandos de Configuração
+git config --global user.name "Seu Nome" – Configura seu nome de usuário globalmente.
+
+git config --global user.email "email@dominio.com" – Configura seu e-mail globalmente.
+
+git config --global core.editor <editor> – Configura o editor padrão para o Git (por exemplo, nano, vim).
+
+git config --list – Exibe as configurações atuais do Git.
+
+## Comandos de Staging (Área de Preparação)
+git add <arquivo> – Adiciona um arquivo ao staging.
+
+git reset <arquivo> – Remove um arquivo da área de staging.
+
+git reset – Desfaz todos os arquivos da área de staging.
+
+git diff --staged – Exibe as diferenças entre os arquivos no staging e o último commit.
+
+## Comandos de Undo (Desfazer)
+git checkout -- <nome-do-arquivo> – Desfaz as alterações no arquivo e o retorna ao último commit.
+
+git reset <commit-id> – Desfaz commits locais (opções --soft, --mixed, --hard).
+
+git clean -fd – Remove arquivos não rastreados (novos arquivos não adicionados ao repositório).
+
+git revert <commit-id> – Reverte um commit criando um novo commit de reversão.
+
+## Comandos de Arquivos e Diretórios
+git ls-files – Lista todos os arquivos rastreados no repositório.
+
+git rm <nome-do-arquivo> – Remove um arquivo do repositório.
+
+git mv <arquivo-antigo> <novo-arquivo> – Move ou renomeia um arquivo.
+
+## Comandos de Submódulos (Submodules)
+git submodule add <url> <diretório> – Adiciona um submódulo a um repositório.
+
+git submodule init – Inicializa o submódulo.
+
+git submodule update – Atualiza o submódulo.
